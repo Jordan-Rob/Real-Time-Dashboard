@@ -6,6 +6,8 @@ import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
 import { dataProvider, liveProvider } from "./providers";
+import { authProvider } from "./providers/auth";
+import { Home, ForgotPassword, Login, Register } from './pages'
 
 import routerBindings, {
   DocumentTitleHandler,
@@ -14,7 +16,6 @@ import routerBindings, {
 import { App as AntdApp } from "antd";
 import { createClient } from "graphql-ws";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { authProvider } from "./authProvider";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 
 const API_URL = "https://api.nestjs-query.refine.dev/graphql";
@@ -45,6 +46,10 @@ function App() {
               >
                 <Routes>
                   <Route index element={<WelcomePage />} />
+                  <Route index element={<Home />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
                 </Routes>
                 <RefineKbar />
                 <UnsavedChangesNotifier />
