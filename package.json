@@ -14,6 +14,7 @@
     "@refinedev/nestjs-query": "^1.1.1",
     "@refinedev/react-router-v6": "^4.5.5",
     "antd": "^5.0.5",
+    "dayjs": "^1.11.10",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.8.1"
@@ -32,7 +33,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "typescript": "^4.7.4",
     "vite": "^4.3.1",
     "vite-tsconfig-paths": "^4.3.1"
@@ -41,7 +42,10 @@
     "dev": "refine dev",
     "build": "tsc && refine build",
     "preview": "refine start",
-    "refine": "refine"
+    "refine": "refine",
+    "codegen": "graphql-codegen",
+    "prettier:format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml}\"",
+    "prettier:check:ci": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "browserslist": {
     "production": [
