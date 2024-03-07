@@ -45,6 +45,7 @@
     "refine": "refine",
     "codegen": "graphql-codegen",
     "prettier:format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
     "prettier:check:ci": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "browserslist": {
