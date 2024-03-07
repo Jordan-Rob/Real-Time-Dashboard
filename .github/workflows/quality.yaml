@@ -1,10 +1,10 @@
 name: Code Quality checks
-on: 
+on:
   pull_request:
     branches: [main]
   push:
     branches: [main]
-concurrency: 
+concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
@@ -21,6 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm install 
+        run: npm install
       - name: Check formatting with Prettier
         run: npm run prettier:check:ci
