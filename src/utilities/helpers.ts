@@ -28,7 +28,7 @@ const filterDeal = (deal?: DealAggregate) =>
 
 const mapDeals = (
   deals: DealAggregate[] = [],
-  state: string
+  state: string,
 ): MappedDealData[] => {
   // filter out deals that don't have a closeDateMonth or closeDateYear
   return deals.filter(filterDeal).map((deal) => {
@@ -55,7 +55,7 @@ const mapDeals = (
 
 // Map deals data to the format required by the chart
 export const mapDealsData = (
-  dealStages: DealStage[] = []
+  dealStages: DealStage[] = [],
 ): MappedDealData[] => {
   // Get the deal stage with the title "WON"
   const won = dealStages.find((stage) => stage.title === "WON");

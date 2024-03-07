@@ -6,4 +6,3 @@ export const getNameInitials = (name: string, count = 2) => {
   const filtered = initials.replace(/[^a-zA-Z]/g, "");
   return filtered.slice(0, count).toUpperCase();
 };
-

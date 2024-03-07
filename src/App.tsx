@@ -1,4 +1,9 @@
-import { Authenticated, GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import {
+  Authenticated,
+  GitHubBanner,
+  Refine,
+  WelcomePage,
+} from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -7,7 +12,7 @@ import "@refinedev/antd/dist/reset.css";
 
 import { dataProvider, liveProvider } from "./providers";
 import { authProvider } from "./providers/auth";
-import { Home, ForgotPassword, Login, Register } from './pages'
+import { Home, ForgotPassword, Login, Register } from "./pages";
 
 import routerBindings, {
   CatchAllNavigate,
@@ -22,7 +27,6 @@ import Layout from "./components/layout";
 
 const API_URL = "https://api.nestjs-query.refine.dev/graphql";
 const WS_URL = "wss://api.nestjs-query.refine.dev/graphql";
-
 
 function App() {
   return (
@@ -50,16 +54,18 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/forgot-password" element={<ForgotPassword />} />
-                  <Route element={
-                    <Authenticated 
-                      key="authenticated-layout"
-                      fallback={<CatchAllNavigate to="/login" />}
-                    >
-                      <Layout>
-                        <Outlet />
-                      </Layout>
-                    </Authenticated>
-                  }>
+                  <Route
+                    element={
+                      <Authenticated
+                        key="authenticated-layout"
+                        fallback={<CatchAllNavigate to="/login" />}
+                      >
+                        <Layout>
+                          <Outlet />
+                        </Layout>
+                      </Authenticated>
+                    }
+                  >
                     <Route index element={<Home />} />
                   </Route>
                 </Routes>
