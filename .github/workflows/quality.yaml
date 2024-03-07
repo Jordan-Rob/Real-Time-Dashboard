@@ -26,5 +26,5 @@ jobs:
         id: PrettierCheck
         run: npm run prettier:check:ci
       - name: Fix  formatting with Prettier
-        if: steps.PrettierCheck.outcome == 'failure'
+        if: steps.PrettierCheck.outcome == 'Error'
         run: npm run prettier:format
