@@ -99,7 +99,7 @@ const DashboardTotalCountCard = ({
             totalCount
           )}
         </Text>
-        <Area {...config} style={{ width: '50%' }} />
+        <Area {...config} style={{ width: "50%" }} />
       </div>
     </Card>
   );

@@ -17,5 +17,5 @@ export {
   ProjectCardSkeleton,
   LatestActivitiesSkeleton,
   DashboardTotalCountCard,
-  LatestActivities
+  LatestActivities,
 };
